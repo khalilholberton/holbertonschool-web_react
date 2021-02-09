@@ -4,16 +4,5 @@ interface Teacher {
   fullTimeEmployee: boolean;
   yearsOfExperience?: number;
   location: string;
-  [chooseAtt: string]: any;
+  [propName: string]: any;
 }
-/*
-const teacher3: Teacher = {
-  firstName: "John",
-  fullTimeEmployee: false,
-  lastName: "Doe",
-  location: "London",
-  contract: false,
-};
-
-console.log(teacher3);
-*/
