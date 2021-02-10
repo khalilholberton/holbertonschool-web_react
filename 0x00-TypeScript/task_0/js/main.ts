@@ -16,20 +16,16 @@ const student2: Student = {
   age: 44,
   location: "Tunis",
 };
-const studentList: Student[] = [student1, student2];
+const studentList: Array<Student> = [student1, student2];
 
-let tableHtml: string = `<table>
-<tr>
-  <th>First name</th>
-  <th>Location</th>
-</tr>
-`;
-studentList.forEach((student) => {
-  tableHtml += `<tr>
-        <td>${student.firstName}</td>
-        <td>${student.location}</td>
-    </tr>`;
+const table: HTMLTableElement = document.createElement("table");
+studentList.forEach((student: Student) => {
+  const row: HTMLTableRowElement = table.insertRow();
+  const fName = document.createElement("td");
+  const loc = document.createElement("td");
+  fName.textContent = student.firstName;
+  loc.textContent = student.location;
+  row.appendChild(fName);
+  row.appendChild(loc);
 });
-
-tableHtml += "</table>";
-document.write(tableHtml);
+document.body.appendChild(table);
