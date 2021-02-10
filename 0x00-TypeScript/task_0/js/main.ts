@@ -18,9 +18,9 @@ const student2: Student = {
 };
 const studentList: Array<Student> = [student1, student2];
 
-const table: HTMLTableElement = document.createElement("table");
+const table = document.createElement("table") as HTMLTableElement;
 studentList.forEach((student: Student) => {
-  const row: HTMLTableRowElement = table.insertRow();
+  const row = table.insertRow();
   const fName = document.createElement("td");
   const loc = document.createElement("td");
   fName.textContent = student.firstName;
