@@ -5,7 +5,7 @@ var printTeacher = function (firstName, lastName) {
     return firstName[0] + ". " + lastName;
 };
 exports.printTeacher = printTeacher;
-exports.StudentClass = /** @class */ (function () {
+var StudentClass = /** @class */ (function () {
     function StudentClass(firstName, lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -18,6 +18,7 @@ exports.StudentClass = /** @class */ (function () {
     };
     return StudentClass;
 }());
+exports.StudentClass = StudentClass;
 /*
 const director1: Directors = {
   firstName: "John",
