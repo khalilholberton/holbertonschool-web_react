@@ -21,10 +21,12 @@ export const printTeacher: printTeacherFunction = (firstName, lastName) => {
 interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
+
 interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
+
 export const StudentClass: StudentConstructor = class StudentClass
   implements StudentClassInterface {
   firstName: string;
@@ -34,6 +36,7 @@ export const StudentClass: StudentConstructor = class StudentClass
     this.firstName = firstName;
     this.lastName = lastName;
   }
+
   workOnHomework() {
     return "Currently working";
   }
