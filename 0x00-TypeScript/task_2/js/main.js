@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.executeWork = exports.isDirector = exports.createEmployee = exports.Teacher = exports.Director = void 0;
+exports.teachClass = exports.executeWork = exports.isDirector = exports.createEmployee = exports.Teacher = exports.Director = void 0;
 var Director = /** @class */ (function () {
     function Director() {
     }
@@ -51,3 +51,12 @@ function executeWork(employee) {
     }
 }
 exports.executeWork = executeWork;
+function teachClass(todayClass) {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    }
+    else if (todayClass === "History") {
+        return "Teaching History";
+    }
+}
+exports.teachClass = teachClass;
