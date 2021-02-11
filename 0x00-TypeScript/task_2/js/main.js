@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+exports.createEmployee = exports.Teacher = exports.Director = void 0;
 var Director = /** @class */ (function () {
     function Director() {
     }
@@ -12,6 +15,7 @@ var Director = /** @class */ (function () {
     };
     return Director;
 }());
+exports.Director = Director;
 var Teacher = /** @class */ (function () {
     function Teacher() {
     }
@@ -26,9 +30,11 @@ var Teacher = /** @class */ (function () {
     };
     return Teacher;
 }());
+exports.Teacher = Teacher;
 function createEmployee(salary) {
     if (typeof salary === "number" && salary < 500) {
         return new Teacher();
     }
     return new Director();
 }
+exports.createEmployee = createEmployee;

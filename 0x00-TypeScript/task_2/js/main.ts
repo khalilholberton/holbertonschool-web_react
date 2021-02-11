@@ -37,3 +37,4 @@ function createEmployee(salary: number): Director | Teacher {
   }
   return new Director();
 }
+export { Director, Teacher, createEmployee };
