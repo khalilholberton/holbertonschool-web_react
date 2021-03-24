@@ -1,0 +1,5 @@
+.Notifications {
+  border: 2px solid var(--holberton-color);
+  border-style: dashed;
+  padding: 10px;
+}
