@@ -1,1 +1,1 @@
-# holbertonschool-web_react projects
+# Holbertonschool-web_react projects

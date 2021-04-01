@@ -1,0 +1,38 @@
+:root {
+  --holberton-color: #e1484c;
+}
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 4px solid #e0003c;
+}
+.App-header .App-logo {
+  height: 250px;
+}
+
+.App-header h1 {
+  color: var(--holberton-color);
+}
+
+.App-body {
+  height: 300px;
+  text-align: left;
+  margin: 50px;
+}
+.App-footer {
+  border-top: 4px solid #e0003c;
+  font-style: italic;
+}
+button {
+  margin-left: 10px;
+  height: 20px;
+}
