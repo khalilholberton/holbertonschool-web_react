@@ -1,0 +1,17 @@
+:root {
+  --holberton-color: #e1484c;
+}
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 4px solid #e0003c;
+}
+.App-header .App-logo {
+  height: 250px;
+}
+
+.App-header h1 {
+  color: var(--holberton-color);
+}

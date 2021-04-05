@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+}
+button {
+  margin-left: 10px;
+  height: 20px;
+}
