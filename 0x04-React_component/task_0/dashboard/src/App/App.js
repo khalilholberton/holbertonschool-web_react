@@ -8,7 +8,7 @@ import Notifications from "../Notifications/Notifications.js";
 import CourseList from "../CourseList/CourseList";
 import { getLatestNotification } from "../utils/utils";
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     const { isLoggedIn } = this.props;
 
@@ -68,5 +68,3 @@ class App extends React.Component {
 App.defaultProps = {
   isLoggedIn: false,
 };
-
-export default App;
