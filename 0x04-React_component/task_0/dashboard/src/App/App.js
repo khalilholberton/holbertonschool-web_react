@@ -10,8 +10,6 @@ import { getLatestNotification } from "../utils/utils";
 
 export default class App extends React.Component {
   render() {
-    const { isLoggedIn } = this.props;
-
     const listCourses = [
       {
         id: 1,
@@ -55,8 +53,10 @@ export default class App extends React.Component {
             <Header />
           </div>
           <div>
-            {isLoggedIn === false && <Login />}
-            {isLoggedIn === true && <CourseList listCourses={listCourses} />}
+            {this.isLoggedIn === false && <Login />}
+            {this.isLoggedIn === true && (
+              <CourseList listCourses={listCourses} />
+            )}
           </div>
           <Footer />
         </div>
