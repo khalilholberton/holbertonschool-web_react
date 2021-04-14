@@ -53,8 +53,8 @@ export default class App extends React.Component {
             <Header />
           </div>
           <div>
-            {this.isLoggedIn === false && <Login />}
-            {this.isLoggedIn === true && (
+            {this.props.isLoggedIn === false && <Login />}
+            {this.props.isLoggedIn === true && (
               <CourseList listCourses={listCourses} />
             )}
           </div>
