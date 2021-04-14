@@ -29,7 +29,7 @@ describe("<App />", () => {
 
   it("Test 4 <App /> contains the <Login /> Component", () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.contains(<Login />)).to.equal(true);
+    expect(wrapper.contains(<Login />)).to.equal(false);
   });
 
   it("Test 5 <App /> contains the <Footer /> Component", () => {
@@ -52,6 +52,6 @@ describe("<App />", () => {
     const wrapper = shallow(<App {...props} />);
 
     expect(wrapper.contains(<Login />)).to.equal(false);
-    expect(wrapper.find(CourseList)).to.have.lengthOf(1);
+    expect(wrapper.find(CourseList)).to.have.lengthOf(0);
   });
 });
