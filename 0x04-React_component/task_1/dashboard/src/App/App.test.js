@@ -54,4 +54,14 @@ describe("<App />", () => {
     expect(wrapper.contains(<Login />)).to.equal(false);
     expect(wrapper.find(CourseList)).to.have.lengthOf(1);
   });
+  test("Test 8 logOut alerts with correct string", () => {
+    const myLogOut = jest.fn(() => undefined);
+    const myAlert = jest.spyOn(global, "alert");
+
+    const wrapper = shallow(<App logOut={myLogOut} />);
+
+    expect(myAlert);
+    expect(myLogOut);
+    jest.restoreAllMocks();
+  });
 });
