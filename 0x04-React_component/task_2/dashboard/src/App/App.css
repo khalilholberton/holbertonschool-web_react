@@ -1,0 +1,21 @@
+:root {
+  --holberton-red: #e1484c;
+}
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+button {
+  margin-left: 10px;
+  height: 20px;
+}
+.upperBlock {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  border-bottom: 4px solid #e0003c;
+}
