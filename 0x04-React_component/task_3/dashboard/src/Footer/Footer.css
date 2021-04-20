@@ -1,0 +1,12 @@
+.App-footer {
+  font-style: italic;
+  border-top: 4px solid #e0003c;
+  position: fixed;
+
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+}
+.App-footer p {
+  text-align: center;
+}
