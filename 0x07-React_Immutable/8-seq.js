@@ -5,7 +5,7 @@ function capitalLetter(string) {
 }
 
 export default function printBestStudents(object) {
-  let seq = Seq(object);
+  const seq = Seq(object);
   console.log(seq
     .filter((st) => st.score > 70)
     .map((st) => {
