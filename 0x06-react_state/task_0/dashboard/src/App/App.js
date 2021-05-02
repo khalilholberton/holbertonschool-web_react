@@ -44,6 +44,7 @@ class App extends React.Component {
   }
 
   render() {
+    const { displayDrawer } = this.state;
     const listCourses = [
       {
         id: 1,
@@ -83,7 +84,12 @@ class App extends React.Component {
       <Fragment>
         <div className={css(styles.App)}>
           <div className={css(styles.upperBlock)}>
-            <Notifications listNotifications={listNotifications} />
+            <Notifications
+              listNotifications={listNotifications}
+              displayDrawer={displayDrawer}
+              handleDisplayDrawer={this.handleDisplayDrawer}
+              handleHideDrawer={this.handleHideDrawer}
+            />
             <Header />
           </div>
 
