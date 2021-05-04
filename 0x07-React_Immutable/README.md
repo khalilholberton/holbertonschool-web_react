@@ -1,1 +1,1 @@
-0x07. React Immutable
+0x07. React Immutable projects
