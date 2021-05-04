@@ -1,8 +1,8 @@
-import { getAllNotificationsByUser, normalizedData } from "./notifications";
+import { getAllNotificationsByUser, normalized } from "./notifications";
 
 describe("notifications", () => {
-  it("returns correct contexts", () => {
-    const res = [
+  it("read data from a json", () => {
+    const data = [
         {
           guid: "2d8e40be-1c78-4de0-afc9-fcc147afd4d2",
           isRead: true,
@@ -20,8 +20,9 @@ describe("notifications", () => {
       ],
       allContext = getAllNotificationsByUser("5debd764a7c57c7839d722e9");
 
-    expect(allContext).toEqual(expect.arrayContaining(res));
+    expect(allContext).toEqual(expect.arrayContaining(data));
   });
+
   it("normalized - result", () => {
     const data = [
       "5debd76480edafc8af244228",
@@ -40,7 +41,7 @@ describe("notifications", () => {
       "5debd764de9fa684468cdc0b",
     ];
 
-    const result = normalizedData.result;
+    const result = normalized.result;
 
     expect(result).toEqual(expect.arrayContaining(data));
   });
@@ -54,7 +55,7 @@ describe("notifications", () => {
       picture: "http://placehold.it/32x32",
     };
 
-    const user = normalizedData.entities.users["5debd764a7c57c7839d722e9"];
+    const user = normalized.entities.users["5debd764a7c57c7839d722e9"];
 
     expect(user).toEqual(data);
   });
@@ -68,7 +69,7 @@ describe("notifications", () => {
     };
 
     const message =
-      normalizedData.entities.messages["efb6c485-00f7-4fdf-97cc-5e12d14d6c41"];
+      normalized.entities.messages["efb6c485-00f7-4fdf-97cc-5e12d14d6c41"];
 
     expect(message).toEqual(data);
   });
@@ -81,7 +82,7 @@ describe("notifications", () => {
     };
 
     const notification =
-      normalizedData.entities.notifications["5debd7642e815cd350407777"];
+      normalized.entities.notifications["5debd7642e815cd350407777"];
 
     expect(notification).toEqual(data);
   });
